@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Meeting Minutes Tracker</title>
+  </head>
+  <body>
+
+    <header>
+        <h1>First Meeting: Getting to Know One Another</h1>
+        <h2>Topic: Icebreakers</h2>
+        <h3>Date: April 15, 2025</h3>
+    </header>
+
+    <section>
+        <h2>Attendance: </h2>
+        <ul>
+            <li>Anusha Rao</li>
+            <li>Isabelle Li</li>
+            <li>Morgan Ayan</li>
+            <li>Emily Hawksworth</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2><i>Agenda:</i></h2>
+        <ol>
+            <li>Go around the room and introduce yourself</li>
+            <li>Announce Project</li>
+            <li>Organize groups amongst groups of people</li>
+            <li>Icebreaker:</li>
+            <details>
+                <p> What is your favorite movie and why?</p>
+            </details>
+            <li>Closing Thoughts</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Unfinished Business: </h2>
+        <ul>
+            <li>Complete Introduction to HTML slides</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>New Business: </h2>
+        <ul>
+            <li>Create Groups</li>
+            <li>Introduce Project</li>
+            <li>Get to Know One Another</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Questions, Comments, Concerns?</h2>
+        <ul>
+            <li>When will this project be due?</li>
+            <li>How many members will be in each group?</li>
+            <li>Decide what languages will be used</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>HTML Basics Image Presented</h2>
+        <figure>
+            <img src="HTML_Basics.png" alt="Image of HTML Basics" width="600">
+            <figcaption>Image containing basic structure using HTML</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h2>Meeting Video Recording</h2>
+        <video controls width="640" height="360">
+            <source src="Video_Recording.mov" type="video/quicktime">
+        </video>
+    </section>
+
+    <section>
+        <h2>Meeting Audio Recording</h2>
+        <audio controls>
+            <source src="Audio_recording.m4a" type="audio/mp4">
+        </audio>
+    </section>
+
+    <section>
+        <h2>Next Group Bonding Activity Preference</h2>
+        <form>
+            <fieldset>
+                <label for="First and Last Name">Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="todays-date">What is today's date?</label><br>
+                <input type="date" id="todays-date" name="todays-date"><br><br>
+
+                <label for="activity-type">Activity Choices:</label><br>
+                <input list="activities" id="activity-type" name="activity-type">
+                <datalist id="activities">
+                <option value="Movie Night">
+                <option value="Bowling">
+                <option value="Pottery">
+                <option value="Paintball">
+                <option value="Ice Skating">
+            </datalist><br><br>
+
+            <p>What days are you available?</p>
+
+            <input type="radio" id="friday" name="style" value="friday">
+            <label for="friday">Friday</label><br>
+
+            <input type="radio" id="saturday" name="style" value="saturday">
+            <label for="saturday">Sunday</label><br>
+
+            <input type="radio" id="sunday" name="style" value="sunday">
+            <label for="sunday">Sunday</label><br>
+
+            <p>How will you travel to our event?</p>
+
+            <input type="checkbox" id="bike" name="bike" value="Bike">
+            <label for="bike"> I will bike</label><br>
+            <input type="checkbox" id="car" name="car" value="Car">
+            <label for="car"> I will drive</label><br>
+            <input type="checkbox" id="walk" name="walk" value="Walk">
+            <label for="walk"> I will walk</label><br><br>
+
+            <label for="favorite">What was your favorite part of today's meeting?</label><br>
+            <textarea id="favorite" name="favorite" rows="4" cols="40"></textarea><br><br>
+
+            <label for="frequency">How often do you want to meet each week?</label><br>
+            <select id="frequency" name="frequency">
+                <option value="daily">Daily</option>
+                <option value="weekly">A few times a week</option>
+                <option value="twice">Twice</option>
+                <option value="Once">Once</option>
+            </select><br><br>
+
+            <button type="submit">Turn-In!</button>
+
+            </fieldset>
+        </form>
+    </section>
+
+
+  </body>
+</html>
