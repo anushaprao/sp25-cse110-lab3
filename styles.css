@@ -20,7 +20,7 @@
   /* styles.css */
 body {
     background-color: #ffeef0;
-    color: color(display-p3 0.2 0.1 0.1 / 1);
+    color: rgb(51, 26, 26);
     margin: 10px 20px 10px 20px;
     padding: 15px 25px 15px 25px;
     border-style: solid;
