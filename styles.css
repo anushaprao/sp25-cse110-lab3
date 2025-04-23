@@ -1,0 +1,293 @@
+/* ================================
+   🌈 Color Variables & Fallbacks
+   ================================ */
+:root {
+  --primary-color: hsl(210, 70%, 50%);
+  --secondary-color: #ff6347;
+  --accent-color: rgba(255, 215, 0, 0.8);
+  --fallback-color: color(display-p3 0.3 0.6 0.9);
+}
+
+/* ================================
+   🌐 Universal & Element Selectors
+   ================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--fallback-color, #e0f7fa);
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* ================================
+   🎨 Typography
+   ================================ */
+h1, h2, h3 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   📦 Box Model
+   ================================ */
+/* Margin - Longhand */
+section {
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  padding: 1rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+}
+
+/* Margin - Shorthand */
+header {
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Padding - Longhand */
+ul {
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+/* Padding - Shorthand */
+ol {
+  padding: 1rem 1.5rem;
+}
+
+/* ================================
+   📐 Sizing & Units
+   ================================ */
+img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+video, audio {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+}
+
+/* Relative Units */
+form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+/* Absolute Units */
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* ================================
+   🧭 Positioning
+   ================================ */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+section:nth-of-type(2) {
+  position: relative;
+  left: 10px;
+}
+
+/* ================================
+   🖼️ Display & Layout
+   ================================ */
+nav {
+  display: none;
+}
+
+figure {
+  display: inline-block;
+  margin: 1rem;
+}
+
+form {
+  display: block;
+}
+
+/* ================================
+   🧰 Flexbox Layout
+   ================================ */
+section:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* ================================
+   🧱 Grid Layout
+   ================================ */
+section:nth-of-type(4) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+/* ================================
+   📱 Responsive Design
+   ================================ */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ================================
+   🔠 Font Import
+   ================================ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* ================================
+   🆔 ID Selector
+   ================================ */
+#name {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+/* ================================
+   📌 Class Selector
+   ================================ */
+.button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: color-mix(in srgb, var(--secondary-color) 70%, black 30%);
+}
+
+/* ================================
+   🧷 Attribute Selector
+   ================================ */
+input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* ================================
+   🎯 Pseudo-classes
+   ================================ */
+input:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ================================
+   🔗 Selector List
+   ================================ */
+h2, h3, p {
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   🧬 Combinators
+   ================================ */
+/* Descendant Combinator */
+section ul li {
+  list-style-type: square;
+}
+
+/* Child Combinator */
+section > ol {
+  list-style-type: decimal;
+}
+
+/* General Sibling Combinator */
+h2 ~ p {
+  font-style: italic;
+}
+
+/* Adjacent Sibling Combinator */
+h2 + ul {
+  margin-top: 0.5rem;
+}
+
+/* Combining Two Selectors */
+input.button {
+  font-weight: bold;
+}
+
+/* ================================
+   🆕 New Selectors
+   ================================ */
+/* :has() Selector */
+form:has(input[type="checkbox"]) {
+  border: 2px dashed var(--accent-color);
+  padding: 1rem;
+}
+
+/* Nested Selectors */
+form {
+  & label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  & input[type="text"],
+  & input[type="date"],
+  & select,
+  & textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}
